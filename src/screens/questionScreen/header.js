@@ -1,18 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import {
-  FlatList,
-  StyleSheet,
-  View,
-  TouchableOpacity,
-  Button,
-  Text,
-} from 'react-native';
-import {useDispatch, useSelector} from 'react-redux';
-import {WIDTH} from '../../constants';
-import RenderQuestion from './renderQuestion';
-import {GoBack, OptionIcon} from '../../icons';
-import LinearGradient from 'react-native-linear-gradient';
-import {useNavigation} from '@react-navigation/native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
+import { useSelector } from 'react-redux';
+import { GoBack, OptionIcon } from '../../icons';
+import { useNavigation } from '@react-navigation/native';
 
 const Header = () => {
   const navigation = useNavigation();
@@ -34,7 +24,8 @@ const Header = () => {
       <View style={styles.upContainer}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
-          style={styles.button}>
+          style={styles.button}
+        >
           <GoBack />
         </TouchableOpacity>
         <Text style={styles.timer}>
@@ -59,18 +50,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     shadowColor: '#DCF5FF',
-    shadowOffset: {width: 0, height: 12},
+    shadowOffset: { width: 0, height: 12 },
     shadowOpacity: 0.04,
     shadowRadius: 50,
     elevation: 12,
     backgroundColor: '#305B83',
-    paddingHorizontal: 10,
-    paddingVertical: 13,
+    paddingHorizontal: 10
   },
   upContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   button: {
     backgroundColor: '#3e678d',
@@ -79,13 +69,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     opacity: 0.8,
-    borderRadius: 10,
+    borderRadius: 10
   },
   timer: {
     color: '#fff',
     fontSize: 20,
-    fontWeight: '700',
-  },
+    fontWeight: '700'
+  }
 });
 
 export default Header;

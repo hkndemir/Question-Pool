@@ -10,8 +10,7 @@
         "D) Bursa",
         "E) Antalya"
       ],
-      "correctAnswer": "B) Ankara",
-      "answeredBy": ""
+      "correctAnswer": "B) Ankara"
     },
     {
       "id": 2,
@@ -23,8 +22,7 @@
         "D) Carbon",
         "E) Nitrogen"
       ],
-      "correctAnswer": "B) Hydrogen",
-      "answeredBy": ""
+      "correctAnswer": "B) Hydrogen"
     },
     {
       "id": 3,
@@ -36,8 +34,7 @@
         "D) George Orwell",
         "E) Franz Kafka"
       ],
-      "correctAnswer": "B) Antoine de Saint-Exupéry",
-      "answeredBy": ""
+      "correctAnswer": "B) Antoine de Saint-Exupéry"
     },
     {
       "id": 4,
@@ -49,21 +46,13 @@
         "D) Uranus",
         "E) Neptune"
       ],
-      "correctAnswer": "C) Jupiter",
-      "answeredBy": ""
+      "correctAnswer": "C) Jupiter"
     },
     {
       "id": 5,
       "question": "Türk bayrağındaki ay ve yıldız ne renktir?",
-      "options": [
-        "A) Mavi",
-        "B) Sarı",
-        "C) Beyaz",
-        "D) Kırmızı",
-        "E) Yeşil"
-      ],
-      "correctAnswer": "C) Beyaz",
-      "answeredBy": ""
+      "options": ["A) Mavi", "B) Sarı", "C) Beyaz", "D) Kırmızı", "E) Yeşil"],
+      "correctAnswer": "C) Beyaz"
     },
     {
       "id": 6,
@@ -75,8 +64,7 @@
         "D) Yeşilırmak",
         "E) Sakarya"
       ],
-      "correctAnswer": "A) Kızılırmak",
-      "answeredBy": ""
+      "correctAnswer": "A) Kızılırmak"
     },
     {
       "id": 7,
@@ -88,60 +76,31 @@
         "D) Adriyatik Denizi",
         "E) Marmara Denizi"
       ],
-      "correctAnswer": "D) Adriyatik Denizi",
-      "answeredBy": ""
+      "correctAnswer": "D) Adriyatik Denizi"
     },
     {
       "id": 8,
       "question": "Atatürk'ün doğum yılı nedir?",
-      "options": [
-        "A) 1881",
-        "B) 1890",
-        "C) 1900",
-        "D) 1919",
-        "E) 1938"
-      ],
-      "correctAnswer": "A) 1881",
-      "answeredBy": ""
+      "options": ["A) 1881", "B) 1890", "C) 1900", "D) 1919", "E) 1938"],
+      "correctAnswer": "A) 1881"
     },
     {
       "id": 9,
       "question": "Türk lirasının simgesi hangisidir?",
-      "options": [
-        "A) $",
-        "B) €",
-        "C) £",
-        "D) ¥",
-        "E) ₺"
-      ],
-      "correctAnswer": "E) ₺",
-      "answeredBy": ""
+      "options": ["A) $", "B) €", "C) £", "D) ¥", "E) ₺"],
+      "correctAnswer": "E) ₺"
     },
     {
       "id": 10,
       "question": "Hangi hayvan Türkiye'nin ulusal simgelerinden biri olarak kabul edilir?",
-      "options": [
-        "A) Kartal",
-        "B) Bozkurt",
-        "C) Aslan",
-        "D) Ayı",
-        "E) Turna"
-      ],
-      "correctAnswer": "B) Bozkurt",
-      "answeredBy": ""
+      "options": ["A) Kartal", "B) Bozkurt", "C) Aslan", "D) Ayı", "E) Turna"],
+      "correctAnswer": "B) Bozkurt"
     },
     {
       "id": 11,
       "question": "Hangisi Türk mutfağına ait bir yemek değildir?",
-      "options": [
-        "A) Kebap",
-        "B) Sushi",
-        "C) Dolma",
-        "D) Börek",
-        "E) Baklava"
-      ],
-      "correctAnswer": "B) Sushi",
-      "answeredBy": ""
+      "options": ["A) Kebap", "B) Sushi", "C) Dolma", "D) Börek", "E) Baklava"],
+      "correctAnswer": "B) Sushi"
     },
     {
       "id": 12,
@@ -153,21 +112,13 @@
         "D) Ziya Gökalp",
         "E) Orhan Veli"
       ],
-      "correctAnswer": "C) Mehmet Akif Ersoy",
-      "answeredBy": ""
+      "correctAnswer": "C) Mehmet Akif Ersoy"
     },
     {
       "id": 13,
       "question": "Türkiye'de kaç coğrafi bölge vardır?",
-      "options": [
-        "A) 5",
-        "B) 6",
-        "C) 7",
-        "D) 8",
-        "E) 9"
-      ],
-      "correctAnswer": "C) 7",
-      "answeredBy": ""
+      "options": ["A) 5", "B) 6", "C) 7", "D) 8", "E) 9"],
+      "correctAnswer": "C) 7"
     },
     {
       "id": 14,
@@ -179,8 +130,7 @@
         "D) Yavuz Sultan Selim",
         "E) II. Abdülhamid"
       ],
-      "correctAnswer": "C) Osman Gazi",
-      "answeredBy": ""
+      "correctAnswer": "C) Osman Gazi"
     },
     {
       "id": 15,
@@ -192,8 +142,7 @@
         "D) Süphan Dağı",
         "E) Toroslar"
       ],
-      "correctAnswer": "C) Ağrı Dağı",
-      "answeredBy": ""
+      "correctAnswer": "C) Ağrı Dağı"
     },
     {
       "id": 16,
@@ -205,8 +154,7 @@
         "D) Afife Jale",
         "E) Latife Hanım"
       ],
-      "correctAnswer": "A) Sabiha Gökçen",
-      "answeredBy": ""
+      "correctAnswer": "A) Sabiha Gökçen"
     },
     {
       "id": 17,
@@ -218,8 +166,7 @@
         "D) Ankara",
         "E) İznik"
       ],
-      "correctAnswer": "D) Ankara",
-      "answeredBy": ""
+      "correctAnswer": "D) Ankara"
     },
     {
       "id": 18,
@@ -231,8 +178,7 @@
         "D) Mısır",
         "E) Irak"
       ],
-      "correctAnswer": "D) Mısır",
-      "answeredBy": ""
+      "correctAnswer": "D) Mısır"
     },
     {
       "id": 19,
@@ -244,21 +190,13 @@
         "D) Quentin Tarantino",
         "E) Francis Ford Coppola"
       ],
-      "correctAnswer": "A) Yılmaz Güney",
-      "answeredBy": ""
+      "correctAnswer": "A) Yılmaz Güney"
     },
     {
       "id": 20,
       "question": "Hangisi Türk müziğinde bir makamdır?",
-      "options": [
-        "A) Rast",
-        "B) Major",
-        "C) Minor",
-        "D) Blues",
-        "E) Jazz"
-      ],
-      "correctAnswer": "A) Rast",
-      "answeredBy": ""
+      "options": ["A) Rast", "B) Major", "C) Minor", "D) Blues", "E) Jazz"],
+      "correctAnswer": "A) Rast"
     },
     {
       "id": 21,
@@ -270,8 +208,7 @@
         "D) Minotor",
         "E) Sfenks"
       ],
-      "correctAnswer": "A) Anka Kuşu",
-      "answeredBy": ""
+      "correctAnswer": "A) Anka Kuşu"
     },
     {
       "id": 22,
@@ -283,8 +220,7 @@
         "D) Beowulf",
         "E) Kalevala"
       ],
-      "correctAnswer": "A) Oğuz Kağan Destanı",
-      "answeredBy": ""
+      "correctAnswer": "A) Oğuz Kağan Destanı"
     },
     {
       "id": 23,
@@ -296,8 +232,7 @@
         "D) Eğirdir Gölü",
         "E) Sapanca Gölü"
       ],
-      "correctAnswer": "B) Van Gölü",
-      "answeredBy": ""
+      "correctAnswer": "B) Van Gölü"
     },
     {
       "id": 24,
@@ -309,8 +244,7 @@
         "D) Amerika ve Avrupa",
         "E) Asya ve Amerika"
       ],
-      "correctAnswer": "C) Asya ve Avrupa",
-      "answeredBy": ""
+      "correctAnswer": "C) Asya ve Avrupa"
     },
     {
       "id": 25,
@@ -322,8 +256,7 @@
         "D) Mustafa Kemal Atatürk",
         "E) Celal Bayar"
       ],
-      "correctAnswer": "D) Mustafa Kemal Atatürk",
-      "answeredBy": ""
+      "correctAnswer": "D) Mustafa Kemal Atatürk"
     },
     {
       "id": 26,
@@ -335,8 +268,7 @@
         "D) İran",
         "E) Irak"
       ],
-      "correctAnswer": "C) Suriye",
-      "answeredBy": ""
+      "correctAnswer": "C) Suriye"
     },
     {
       "id": 27,
@@ -348,8 +280,7 @@
         "D) Türkçe",
         "E) Farsça"
       ],
-      "correctAnswer": "D) Türkçe",
-      "answeredBy": ""
+      "correctAnswer": "D) Türkçe"
     },
     {
       "id": 28,
@@ -361,8 +292,7 @@
         "D) Adana",
         "E) İstanbul"
       ],
-      "correctAnswer": "E) İstanbul",
-      "answeredBy": ""
+      "correctAnswer": "E) İstanbul"
     },
     {
       "id": 29,
@@ -374,8 +304,7 @@
         "D) Büyükada",
         "E) Heybeliada"
       ],
-      "correctAnswer": "B) Gökçeada",
-      "answeredBy": ""
+      "correctAnswer": "B) Gökçeada"
     },
     {
       "id": 30,
@@ -387,8 +316,7 @@
         "D) Sakla samanı gelir zamanı",
         "E) Hepsi"
       ],
-      "correctAnswer": "E) Hepsi",
-      "answeredBy": ""
+      "correctAnswer": "E) Hepsi"
     }
   ]
 }
