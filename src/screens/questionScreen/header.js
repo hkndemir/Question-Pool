@@ -68,7 +68,6 @@ const Header = ({ questions, insets, currentIndex }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     shadowColor: '#DCF5FF',
     shadowOffset: { width: 0, height: 12 },
     shadowOpacity: 0.04,
@@ -118,11 +117,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#1A3855',
     height: 7,
     borderRadius: 9,
-    position: 'absolute',
-    bottom: 15,
     alignSelf: 'center',
     overflow: 'hidden',
-    flexDirection: 'row'
+    flexDirection: 'row',
+    marginBottom: 15,
+    marginTop: 7
   },
   progressBarImage: {
     height: 7

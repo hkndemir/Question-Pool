@@ -16,6 +16,7 @@ import { useDispatch } from 'react-redux';
 import { LinearGradient } from 'expo-linear-gradient';
 import { LeftArrow } from '../../icons';
 import { useNavigation } from '@react-navigation/native';
+import { IS_IOS } from '../../constants';
 
 const QuestionScreen = () => {
   const navigation = useNavigation();
@@ -79,7 +80,7 @@ const QuestionScreen = () => {
         style={[
           styles.bottomButtons,
           //Inline style was given because hook was used in the style.
-          {
+          IS_IOS && {
             paddingBottom: insets.bottom - 10
           }
         ]}
