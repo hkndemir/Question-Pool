@@ -8,20 +8,12 @@ import {
 } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { WIDTH } from '../../constants';
-import {
-  Brush,
-  ZoomIn,
-  ZoomOut,
-  CheckCircle,
-  NullCircle,
-  LeftArrow
-} from '../../icons';
+import { Brush, ZoomIn, ZoomOut, CheckCircle, NullCircle } from '../../icons';
 import { updateAnswer } from '../../redux/slices/app';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-const RenderQuestion = ({ question, index, scrollToQuestion, questions }) => {
+const RenderQuestion = ({ question, index }) => {
   const dispatch = useDispatch();
   const insets = useSafeAreaInsets();
   const navigation = useNavigation();
@@ -70,62 +62,6 @@ const RenderQuestion = ({ question, index, scrollToQuestion, questions }) => {
         keyExtractor={(item, index) => index.toString()}
         contentContainerStyle={styles.optionsList}
       />
-      <View
-        style={[
-          styles.bottomButtons,
-          //Inline style was given because hook was used in the style.
-          {
-            paddingBottom: insets.bottom - 10
-          }
-        ]}
-      >
-        <LinearGradient
-          colors={['#03A9F1', '#1A85B4']}
-          style={styles.prevAndNextButtonLinear}
-        >
-          <TouchableOpacity
-            onPress={() => {
-              if (index > 0) {
-                scrollToQuestion(index - 1);
-              }
-            }}
-            style={styles.prevAndNextButton}
-          >
-            <LeftArrow />
-            <Text style={styles.prevAndNextButtonText}>Önceki Soru</Text>
-          </TouchableOpacity>
-        </LinearGradient>
-        {index + 1 === questions?.length ? (
-          <LinearGradient
-            colors={['#1ABC9C', '#16A085']}
-            style={styles.prevAndNextButtonLinear}
-          >
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate('ExamResultScreen', { questions })
-              }
-              style={styles.submitButton}
-            >
-              <Text style={styles.submitButtonText}>Testi Bitir</Text>
-            </TouchableOpacity>
-          </LinearGradient>
-        ) : (
-          <LinearGradient
-            colors={['#03A9F1', '#1A85B4']}
-            style={styles.prevAndNextButtonLinear}
-          >
-            <TouchableOpacity
-              onPress={() => scrollToQuestion(index + 1)}
-              style={styles.prevAndNextButton}
-            >
-              <Text style={styles.prevAndNextButtonText}>Sonraki Soru</Text>
-              <View style={styles.leftArrowReverse}>
-                <LeftArrow />
-              </View>
-            </TouchableOpacity>
-          </LinearGradient>
-        )}
-      </View>
     </View>
   );
 };
@@ -176,7 +112,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     alignSelf: 'center',
-    borderRadius: 5
+    borderRadius: 5,
+    overflow: 'hidden'
   },
   questionText: {
     fontSize: 16,
@@ -202,37 +139,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#BCDCFA',
     marginLeft: 15
-  },
-  bottomButtons: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    background: 'rgba(26, 56, 85, 0.70)'
-  },
-  prevAndNextButtonLinear: {
-    padding: 15,
-    borderRadius: 10
-  },
-  prevAndNextButton: {
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  leftArrowReverse: {
-    transform: [{ rotate: '180deg' }]
-  },
-  prevAndNextButtonText: {
-    color: '#F8FAFC',
-    fontSize: 14,
-    fontWeight: '700'
-  },
-  submitButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 20
-  },
-  submitButtonText: {
-    color: '#ffffff',
-    fontSize: 14,
-    fontWeight: '700'
   }
 });
 
