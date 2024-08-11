@@ -59,16 +59,6 @@ const ExamResultScreen = ({ route }) => {
         </View>
       </View>
 
-      <Button
-        title='Üniteye Başla'
-        onPress={() => {
-          navigation.reset({
-            index: 0,
-            routes: [{ name: 'Home' }]
-          });
-          dispatch(reset());
-        }}
-      />
       <LinearGradient
         colors={['#03A9F1', '#1A85B4']}
         style={styles.bottomButton}

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
-import { useSelector } from 'react-redux';
 import { GoBack, OptionIcon } from '../../icons';
 import { useNavigation } from '@react-navigation/native';
+import OptionsModal from './optionsModal';
 
-const Header = () => {
+const Header = ({ questions, insets }) => {
   const navigation = useNavigation();
   const [seconds, setSeconds] = useState(0);
-  const questions = useSelector(state => state?.app?.questions);
 
   useEffect(() => {
     let interval = null;
@@ -38,9 +37,7 @@ const Header = () => {
             .padStart(2, '0')}
           :{(seconds % 60).toString().padStart(2, '0')}sn
         </Text>
-        <TouchableOpacity style={styles.button}>
-          <OptionIcon />
-        </TouchableOpacity>
+        <OptionsModal navigation={navigation} questions={questions} insets={insets} />
       </View>
     </View>
   );

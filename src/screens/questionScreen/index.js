@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 const QuestionScreen = () => {
   const questions = useSelector(state => state?.app?.questions);
   const flatListRef = useRef(null);
-  console.log(questions);
+
   const navigation = useNavigation();
   const insets = useSafeAreaInsets();
   const scrollToQuestion = index => {
@@ -29,7 +29,7 @@ const QuestionScreen = () => {
       ]}
     >
       <StatusBar barStyle='light-content' />
-      <Header />
+      <Header questions={questions} insets={insets} />
       <FlatList
         ref={flatListRef}
         data={questions}
