@@ -1,23 +1,31 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FlatList, StyleSheet, StatusBar, View } from 'react-native';
 import { useSelector } from 'react-redux';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import RenderQuestion from './renderQuestion';
 import Header from './header';
-import { useNavigation } from '@react-navigation/native';
+import { reset } from '../../redux/slices/app';
+import { useDispatch } from 'react-redux';
 
 const QuestionScreen = () => {
   const questions = useSelector(state => state?.app?.questions);
   const flatListRef = useRef(null);
-
-  const navigation = useNavigation();
   const insets = useSafeAreaInsets();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    return () => {
+      dispatch(reset());
+    };
+  }, []);
+
   const scrollToQuestion = index => {
     flatListRef?.current?.scrollToIndex({
       animated: true,
       index: index
     });
   };
+
   return (
     <View
       style={[
@@ -28,7 +36,7 @@ const QuestionScreen = () => {
         }
       ]}
     >
-      <StatusBar barStyle='light-content' />
+      <StatusBar barStyle='light-content' backgroundColor='#305B83' />
       <Header questions={questions} insets={insets} />
       <FlatList
         ref={flatListRef}

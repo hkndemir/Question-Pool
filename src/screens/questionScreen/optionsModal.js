@@ -6,7 +6,7 @@ import AnswerKeyModal from './answerKeyModal';
 
 const OptionsModal = ({ navigation, questions, insets }) => {
   const [modalVisible, setModalVisible] = useState(false);
-  console.log(questions);
+
   return (
     <View>
       <TouchableOpacity

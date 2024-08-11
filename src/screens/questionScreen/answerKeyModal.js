@@ -5,11 +5,12 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
-  FlatList
+  FlatList,
+  ScrollView
 } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import DersIcon from '../../assets/DersIcon.png';
-import { HEIGHT } from '../../constants';
+import { HEIGHT, IS_IOS } from '../../constants';
 
 const options = ['A', 'B', 'C', 'D', 'E'];
 
@@ -40,7 +41,7 @@ const AnswerKeyModal = ({ questions, insets }) => {
           enabled: true
         }}
         draggable
-        height={HEIGHT - insets.top}
+        height={HEIGHT - insets.top - (IS_IOS ? 0 : 20)}
       >
         <View style={styles.titleContainer}>
           <Image source={DersIcon} />
@@ -60,27 +61,26 @@ const AnswerKeyModal = ({ questions, insets }) => {
           renderItem={({ item, index }) => (
             <View style={styles.itemContainer}>
               <Text style={styles.questionNumber}>{index + 1}. Soru</Text>
-              {options.map((option, i) => (
-                <View
-                  key={i}
-                  style={[
-                    styles.optionContainer,
-                    item?.userAnswer?.slice(0, 1) === option &&
-                      styles.selectOptionContainer
-                  ]}
-                >
-                  <Text
+              <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                {options.map((option, i) => (
+                  <View
                     key={i}
                     style={[
-                      styles.optionText,
+                      styles.optionContainer,
                       item?.userAnswer?.slice(0, 1) === option &&
-                        styles.selectOptionText
-                    ]}
-                  >
-                    {option}
-                  </Text>
-                </View>
-              ))}
+                        styles.selectOptionContainer,
+                    ]}>
+                    <Text
+                      style={[
+                        styles.optionText,
+                        item?.userAnswer?.slice(0, 1) === option &&
+                          styles.selectOptionText,
+                      ]}>
+                      {option}
+                    </Text>
+                  </View>
+                ))}
+              </ScrollView>
             </View>
           )}
         />
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
   },
   flatlistStyle: {
     marginLeft: 15,
-    marginRight: 36,
+    marginRight: 35,
     marginTop: 17
   },
   itemContainer: {

@@ -3,6 +3,7 @@ import { StyleSheet, View, TouchableOpacity, Text } from 'react-native';
 import { GoBack, OptionIcon } from '../../icons';
 import { useNavigation } from '@react-navigation/native';
 import OptionsModal from './optionsModal';
+import { IS_IOS } from '../../constants'
 
 const Header = ({ questions, insets }) => {
   const navigation = useNavigation();
@@ -52,7 +53,8 @@ const styles = StyleSheet.create({
     shadowRadius: 50,
     elevation: 12,
     backgroundColor: '#305B83',
-    paddingHorizontal: 10
+    paddingHorizontal: 10,
+    paddingTop: IS_IOS ? 0 : 10
   },
   upContainer: {
     flexDirection: 'row',
