@@ -85,51 +85,46 @@ const QuestionScreen = () => {
           }
         ]}
       >
-        <LinearGradient
-          colors={['#03A9F1', '#1A85B4']}
-          style={styles.prevAndNextButtonLinear}
+        <TouchableOpacity
+          onPress={() => {
+            if (currentIndex > 0) {
+              setCurrentIndex(prev => prev - 1);
+            }
+          }}
         >
-          <TouchableOpacity
-            onPress={() => {
-              if (currentIndex > 0) {
-                setCurrentIndex((prev) => prev - 1);
-              }
-            }}
-            style={styles.prevAndNextButton}
-          >
-            <LeftArrow />
-            <Text style={styles.prevAndNextButtonText}>Önceki Soru</Text>
-          </TouchableOpacity>
-        </LinearGradient>
-        {currentIndex + 1 === questions?.length ? (
-          <LinearGradient
-            colors={['#1ABC9C', '#16A085']}
-            style={styles.prevAndNextButtonLinear}
-          >
-            <TouchableOpacity
-              onPress={() =>
-                navigation.navigate('ExamResultScreen', { questions })
-              }
-              style={styles.submitButton}
-            >
-              <Text style={styles.submitButtonText}>Testi Bitir</Text>
-            </TouchableOpacity>
-          </LinearGradient>
-        ) : (
           <LinearGradient
             colors={['#03A9F1', '#1A85B4']}
             style={styles.prevAndNextButtonLinear}
           >
-            <TouchableOpacity
-              onPress={() => setCurrentIndex((prev) => prev + 1)}
-              style={styles.prevAndNextButton}
+            <LeftArrow />
+            <Text style={styles.prevAndNextButtonText}>Önceki Soru</Text>
+          </LinearGradient>
+        </TouchableOpacity>
+        {currentIndex + 1 === questions?.length ? (
+          <TouchableOpacity
+            onPress={() =>
+              navigation.navigate('ExamResultScreen', { questions })
+            }
+          >
+            <LinearGradient
+              colors={['#1ABC9C', '#16A085']}
+              style={styles.prevAndNextButtonLinear}
+            >
+              <Text style={styles.submitButtonText}>Testi Bitir</Text>
+            </LinearGradient>
+          </TouchableOpacity>
+        ) : (
+          <TouchableOpacity onPress={() => setCurrentIndex(prev => prev + 1)}>
+            <LinearGradient
+              colors={['#03A9F1', '#1A85B4']}
+              style={styles.prevAndNextButtonLinear}
             >
               <Text style={styles.prevAndNextButtonText}>Sonraki Soru</Text>
               <View style={styles.leftArrowReverse}>
                 <LeftArrow />
               </View>
-            </TouchableOpacity>
-          </LinearGradient>
+            </LinearGradient>
+          </TouchableOpacity>
         )}
       </View>
     </View>
@@ -149,9 +144,7 @@ const styles = StyleSheet.create({
   },
   prevAndNextButtonLinear: {
     padding: 15,
-    borderRadius: 10
-  },
-  prevAndNextButton: {
+    borderRadius: 10,
     flexDirection: 'row',
     alignItems: 'center'
   },
@@ -163,15 +156,11 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '700'
   },
-  submitButton: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingHorizontal: 20
-  },
   submitButtonText: {
     color: '#ffffff',
     fontSize: 14,
-    fontWeight: '700'
+    fontWeight: '700',
+    paddingHorizontal: 20
   }
 });
 

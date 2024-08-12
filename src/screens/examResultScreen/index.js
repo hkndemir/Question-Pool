@@ -58,22 +58,23 @@ const ExamResultScreen = ({ route }) => {
         </View>
       </View>
 
-      <LinearGradient
-        colors={['#03A9F1', '#1A85B4']}
+      <TouchableOpacity
+        onPress={() => {
+          navigation.reset({
+            index: 0,
+            routes: [{ name: 'Home' }]
+          });
+          dispatch(reset());
+        }}
         style={styles.bottomButton}
       >
-        <TouchableOpacity
-          onPress={() => {
-            navigation.reset({
-              index: 0,
-              routes: [{ name: 'Home' }]
-            });
-            dispatch(reset());
-          }}
+        <LinearGradient
+          colors={['#03A9F1', '#1A85B4']}
+          style={styles.linearArea}
         >
           <Text style={styles.bottomButtonText}>Üniteye Başla</Text>
-        </TouchableOpacity>
-      </LinearGradient>
+        </LinearGradient>
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
@@ -131,10 +132,13 @@ const styles = StyleSheet.create({
   bottomButton: {
     position: 'absolute',
     bottom: 40,
-    width: '95%',
-    borderRadius: 10,
+    width: '95%'
+  },
+  linearArea: {
+    width: '100%',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderRadius: 10
   },
   bottomButtonText: {
     fontWeight: '700',

@@ -70,7 +70,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#1A3855',
     width: WIDTH,
-    padding: 10
+    padding: 10,
+    paddingBottom: 0
   },
   topBar: {
     flexDirection: 'row',
