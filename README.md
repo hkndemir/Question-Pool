@@ -36,5 +36,6 @@ Question-Pool, 30 soruluk bir quiz uygulamasıdır. Kullanıcılar bu soruları 
 
    ```bash
    npx react-native run-ios
-## Ekran Görüntüleri
+## Ekran Kayıtları
 
+[Android Ekran Kaydı](videoRecordings/android.mp4)
