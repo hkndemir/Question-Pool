@@ -39,3 +39,4 @@ Question-Pool, 30 soruluk bir quiz uygulamasıdır. Kullanıcılar bu soruları 
 ## Ekran Kayıtları
 
 [Android Ekran Kaydı](videoRecordings/android.mp4)
+[İos Ekran Kaydı](videoRecordings/ios.mp4)
