@@ -13,7 +13,7 @@ import RenderQuestion from './renderQuestion';
 import Header from './header';
 import { reset } from '../../redux/slices/app';
 import { useDispatch } from 'react-redux';
-import { LinearGradient } from 'expo-linear-gradient';
+import LinearGradient from 'react-native-linear-gradient';
 import { LeftArrow } from '../../icons';
 import { useNavigation } from '@react-navigation/native';
 import { IS_IOS } from '../../constants';

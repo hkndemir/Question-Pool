@@ -16,7 +16,7 @@ import Net from '../../assets/Net.png';
 import Correct from '../../assets/correct.png';
 import Incorrect from '../../assets/incorrect.png';
 import Null from '../../assets/null.png';
-import { LinearGradient } from 'expo-linear-gradient';
+import LinearGradient from 'react-native-linear-gradient';
 
 const ExamResultScreen = ({ route }) => {
   const navigation = useNavigation();
